@@ -1,0 +1,11 @@
+python manage.py makemigrations name => when you create models, you will run this to add to the migrations folder
+python manage.py migrate => take the migrations folder created above and apply to the project
+
+python manage.py shell => database access
+from main.models import Item, ToDoList
+t = ToDoList(name="Name") => creates an item in the ToDoList
+t.save() => saves it
+
+ToDoList.objects.all() => gets all of the objects
+
+ToDoList.objects.get(name="Samet's list") -> gets all of the objects with the given name
