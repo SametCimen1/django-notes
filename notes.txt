@@ -1,3 +1,7 @@
+django-admin startproject mysite
+
+python.manage.py runserver -> starts the server
+
 python manage.py makemigrations name => when you create models, you will run this to add to the migrations folder
 python manage.py migrate => take the migrations folder created above and apply to the project
 
@@ -9,3 +13,17 @@ t.save() => saves it
 ToDoList.objects.all() => gets all of the objects
 
 ToDoList.objects.get(name="Samet's list") -> gets all of the objects with the given name
+
+Item is a foreign key so to add one 
+t.item_set.all() -> return that todoList's objects
+t.item_set.create(text="Go to the mall", complete = False)
+t.item_set.get(id = 1) || t.item_set.get(name="Go To The Mall")
+
+
+t.objects.filter(name__startswith="Samet")
+del_object = t.get(id=1)
+del_object.delete()
+
+
+CREATE SUPER USER
+python manage.py createsuperuser
