@@ -20,6 +20,5 @@ from django.urls import include, path
 #when a url is typed like /home/start. This file checks the first parth which is home. Then goes to the home url
 urlpatterns = [
     path("", include("main.urls")),
-    path("home/", include("main.urls")),
     path('admin/', admin.site.urls),
 ]

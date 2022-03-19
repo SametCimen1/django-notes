@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base</title>
+    <title>{% block title%}To-Do{%endblock%} </title>
 </head>
 <body>
-    <p>Base template</p>
+
+    <!-- The bottom will be overwritten from other html files.     -->
+    <div id = "content", name = "content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
 </body>
 </html>
